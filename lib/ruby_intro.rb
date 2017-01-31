@@ -3,21 +3,32 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  sum = 0
+  arr.each {|elem| sum += elem}
+  return sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  len = arr.size
+  return 0 if len == 0
+  return arr[1] if len == 1
+  arr.sort!
+  arr[len-1] + arr[len-2]
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  arr.each do |elem1|
+    arr.each do |elem2|
+        return true if n == elem1 + elem2
+    end
+  end
+  false
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, ${name}"
 end
 
 def starts_with_consonant? s
